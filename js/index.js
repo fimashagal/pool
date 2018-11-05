@@ -4,7 +4,14 @@ define(function (require) {
 
     const pool = new Pool();
 
-    pool.useSet(0, 1, 2, 3, 3, 4, 5, "asha", false);
+    pool.useSet(
+        { x: 0, y: 21 },
+        { x: 10, y: 2 },
+        { x: 1, y: 3 },
+        { x: 4, y: 4 },
+        { x: 3, y: 2 },
+        { x: 14, y: 24 }
+    );
 
     console.log(pool.getOne());
     console.log(pool.getOne());
