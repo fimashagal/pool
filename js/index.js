@@ -14,26 +14,5 @@ define(function (require) {
     );
 
     console.log(pool.getOne());
-    console.log(pool.getOne());
-    console.log(pool.getOne());
-    console.log(pool.getOne());
-    console.log(pool.getOne());
-    console.log(pool.getOne());
-    console.log(pool.getOne());
-    console.log(pool.getOne());
-    console.log(pool.getOne());
-    console.log(pool.getOne());
-    console.log(pool.getOne());
-    console.log(pool.getOne());
-    console.log(pool.getOne());
-    console.log(pool.getOne());
-    console.log(pool.getOne());
-    console.log(pool.getOne());
-    console.log(pool.getOne());
-    console.log(pool.getOne());
-    console.log(pool.getOne());
-    console.log(pool.getOne());
-    console.log(pool.getOne());
-    console.log(pool.getOne());
-    console.log(pool.getOne());
+
 });
