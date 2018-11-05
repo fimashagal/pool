@@ -1,7 +1,7 @@
 "use strict";
 function Pool (...poolItems) {
-    this.len = 0;
     this.items = [];
+    this.involvedItems = [];
     poolItems.length && this.useSet(poolItems);
 }
 
@@ -12,18 +12,19 @@ Pool.prototype.useSet = function (...array) {
     if(array.length){
         array = [...new Set(array)];
         this.items = array;
-        this.len = array.length;
+        this.involvedItems = Array.from(array);
     }
     return this;
 };
 
 Pool.prototype.getOne = function () {
-    return this.items[this._genRandomIndex()];
+    if(this.involvedItems.length === 0){
+        this.involvedItems = Array.from(this.items);
+    }
+    const randomIndex = Math.floor(Math.random() * this.involvedItems.length);
+    return this.involvedItems.splice(randomIndex, randomIndex + 1)[0];
 };
 
-Pool.prototype._genRandomIndex = function () {
-    return Math.floor(Math.random() * this.len);
-};
 
 define(function () {
     return Pool;
